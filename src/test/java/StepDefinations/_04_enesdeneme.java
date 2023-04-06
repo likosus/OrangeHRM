@@ -1,7 +1,8 @@
 package StepDefinations;
 
-public class _04_enesdENEME {
+public class _04_enesdeneme {
     public static void main(String[] args) {
-        System.out.println("deneme 1");
+
+        System.out.println("deneme1");
     }
 }
