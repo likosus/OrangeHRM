@@ -10,6 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 
 import javax.swing.*;
 
@@ -36,14 +37,17 @@ public class _01_LoginStep {
     public void clickOnAddButton() {
         ln.waitUntilClickable(ln.Adminclick);
         ln.clickFunction(ln.Adminclick);
-
     }
 
     @When("Entering the required info to the all input boxes and Click Save Button")
     public void enteringTheRequiredInfoToTheAllInputBoxesAndClickSaveButton() {
 
         dc.jsClickFunction(dc.addBttn);
-        dc.clickFunction(dc.addBttn);
+
+        dc.clickFunction(dc.closebutton);
+
+        Select sec=new Select(dc.userRole);
+        sec.selectByIndex(2);
 
         dc.clickFunction(dc.userRole);
 
@@ -57,6 +61,7 @@ public class _01_LoginStep {
 
     @Then("Verify that ESS is added on the list")
     public void verifyThatESSIsAddedOnTheList() {
+
 
     }
 

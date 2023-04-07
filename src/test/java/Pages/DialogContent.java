@@ -18,12 +18,10 @@ public class DialogContent extends Parent{
 
     @FindBy (xpath = "//button[@type='submit']")
     public WebElement clicklogin;
-
-
     @FindBy(css = "div[class='orangehrm-header-container']>button")
     public WebElement addBttn;
 
-    @FindBy (xpath = "//div[text()='ESS']")
+    @FindBy (xpath = "//div[@class='oxd-select-text oxd-select-text--active']")
     public WebElement userRole;
 
     @FindBy (xpath = "//div[text()='Enabled']")
@@ -44,6 +42,8 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "//button[@class='oxd-button oxd-button--medium oxd-button--secondary orangehrm-left-space']")
     public WebElement saveButton;
 
+    @FindBy(xpath = "//i[@class='oxd-icon bi-chevron-left']")
+    public WebElement closebutton;
 
 
 }
