@@ -11,7 +11,8 @@ public class _02_CreatingEssUser {
     @And("click save button before entering mandatory field")
     public void clickSaveButtonBeforeEnteringMandatoryField() {
 
-       dc.clickFunction(dc.saveButton);
+        dc.clickFunction(dc.saveButton);
+
 
     }
 

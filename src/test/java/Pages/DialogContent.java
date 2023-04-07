@@ -41,7 +41,7 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "(//input[@class='oxd-input oxd-input--active'])[4]")
     public WebElement RePasswordRe;
 
-    @FindBy(xpath = "//button[@type='submit']")
+    @FindBy(xpath = "//button[@class='oxd-button oxd-button--medium oxd-button--secondary orangehrm-left-space']")
     public WebElement saveButton;
 
 

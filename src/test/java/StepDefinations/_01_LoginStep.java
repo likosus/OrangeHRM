@@ -6,13 +6,20 @@ import Utilities.GWD;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
+
+import javax.swing.*;
 
 public class _01_LoginStep {
     DialogContent dc=new DialogContent();
     LeftNav ln=new LeftNav();
 
-    @Given("Navigate to Campus")
-    public void navigateToCampus() {
+
+    @Given("Navigate to site")
+    public void navigateTosite() {
         GWD.getDriver().get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
     }
 
@@ -38,10 +45,8 @@ public class _01_LoginStep {
         dc.jsClickFunction(dc.addBttn);
         dc.clickFunction(dc.addBttn);
 
-        dc.waitUntilClickable(dc.userRole);
         dc.clickFunction(dc.userRole);
 
-        dc.jsClickFunction(dc.status);
         dc.clickFunction(dc.status);
 
         dc.waitUntilClickable(dc.EmployeeName);
