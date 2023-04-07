@@ -4,9 +4,10 @@
     Background:
       Given Navigate to site
       When Login as an Admin and navigate to Admin UserManagement Page
-      Then Click on Add Button
+
     Scenario:Message displayed when click save button
-      And click save button before entering mandatory field
+      When Click on Add newButton
+      And click save button before entering mandatory fields
       Then verify that notification messaged in red color displayed
 
 

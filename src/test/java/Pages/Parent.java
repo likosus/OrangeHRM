@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
@@ -18,9 +19,14 @@ public class Parent
     WebDriverWait wait=new WebDriverWait(GWD.getDriver(),
             Duration.ofSeconds(30));
 
+    public  void actionclickFunction(WebElement element){
+        wait.until(ExpectedConditions.elementToBeClickable(element));
+        Select sec=new Select(element);
+    }
+
     public void sendKeysFunction(WebElement element, String yazi)
     {
-        waitUntilVisible(element); // gözükene kadar bekle
+        waitUntilVisible(element, yazi); // gözükene kadar bekle
         scrollToElement(element);  // scroll yap
         element.clear();           // temizle
         element.sendKeys(yazi);    // gönder
@@ -51,7 +57,7 @@ public class Parent
         js.executeScript("arguments[0].scrollIntoView();", element);
     }
 
-    public void waitUntilVisible(WebElement element){
+    public void waitUntilVisible(WebElement element, String yazi){
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 

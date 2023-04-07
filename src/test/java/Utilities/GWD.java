@@ -70,12 +70,21 @@ public class GWD {
             throw new RuntimeException(e);
         }
 
-        if (threadDriver.get() != null) { // dolu ise, boş değilse
-            threadDriver.get().quit();
-            WebDriver driver = threadDriver.get(); driver=null;
-            threadDriver.set(driver);
+//        if (threadDriver.get() != null) { // dolu ise, boş değilse
+//            threadDriver.get().quit();
+//            WebDriver driver = threadDriver.get(); driver=null;
+//            threadDriver.set(driver);
         }
-    }
+        public static void Bekle(int sn)
+        {
+            try {
+                Thread.sleep(5000*sn); // ms beklediği
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+
 
     public static void threadBrowserSet(String browser){
         threadBrowserName.set(browser);
