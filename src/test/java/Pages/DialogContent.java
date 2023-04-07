@@ -20,7 +20,7 @@ public class DialogContent extends Parent{
     public WebElement clicklogin;
 
 
-    @FindBy(xpath = "//button[@type='button']")
+    @FindBy(css = "div[class='orangehrm-header-container']>button")
     public WebElement addBttn;
 
     @FindBy (xpath = "//div[text()='ESS']")
@@ -41,6 +41,8 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "(//input[@class='oxd-input oxd-input--active'])[4]")
     public WebElement RePasswordRe;
 
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement saveButton;
 
 
 

@@ -35,19 +35,19 @@ public class _01_LoginStep {
     @When("Entering the required info to the all input boxes and Click Save Button")
     public void enteringTheRequiredInfoToTheAllInputBoxesAndClickSaveButton() {
 
-        dc.waitUntilClickable(dc.addBttn);
+        dc.jsClickFunction(dc.addBttn);
         dc.clickFunction(dc.addBttn);
+
         dc.waitUntilClickable(dc.userRole);
         dc.clickFunction(dc.userRole);
-        dc.waitUntilClickable(dc.status);
+
+        dc.jsClickFunction(dc.status);
         dc.clickFunction(dc.status);
+
         dc.waitUntilClickable(dc.EmployeeName);
         dc.sendKeysFunction(dc.EmployeeName, "Paul  Collings");
         dc.sendKeysFunction(dc.usernameRe,"Group16");
         dc.sendKeysFunction(dc.PasswordRe, "admin123");
-
-
-
     }
 
     @Then("Verify that ESS is added on the list")

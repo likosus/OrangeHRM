@@ -31,6 +31,12 @@ public class Parent
         element.click();
     }
 
+    public void jsClickFunction(WebElement element){
+
+        wait.until(ExpectedConditions.elementToBeClickable(element));
+        JavascriptExecutor js=(JavascriptExecutor) GWD.getDriver();
+        js.executeScript("arguments[0].click();",element);
+    }
     public void verifyContainsTextFunction(WebElement element, String value){
         wait.until(ExpectedConditions.textToBePresentInElement(element, value));
         Assert.assertTrue(element.getText().toLowerCase().contains(value.toLowerCase()),"bo such TEXT");
