@@ -26,13 +26,6 @@ public class DialogContent extends Parent{
     public WebElement addBttn;
 
 
-
-//    @FindBy (xpath = "(//i[@class='oxd-icon bi-caret-down-fill oxd-select-text--arrow'])[1]")
-//    public WebElement userRole;
-//
-//    @FindBy (xpath = "//div[text()='Enabled']")
-//    public WebElement status;
-
     @FindBy (xpath = "//input[@placeholder='Type for hints...']")
     public WebElement EmployeeName;
 
