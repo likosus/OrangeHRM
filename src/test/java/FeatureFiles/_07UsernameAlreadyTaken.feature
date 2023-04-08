@@ -1,7 +1,8 @@
 Feature:
-  Background:create username already taken one
-    When Login as an Admin and navigate to Admin/UserManagement Page
-    Then Click on Add Button
-    Scenario:
-      When Create username already taken one
-      Then verify messages"Already Exists"
+  Scenario:
+    Given Navigate to site
+    When Login as an Admin and navigate to Admin UserManagement Page seven
+    Then Click on Add Button seven
+
+      When Create username already taken one seven
+      Then verify messages Already Exists seven
