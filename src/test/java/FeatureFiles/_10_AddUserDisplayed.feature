@@ -1,6 +1,6 @@
 Feature:
-  Background:create username already taken one
-    When Login as an Admin and navigate to Admin/UserManagement Page
-    Then Click on Add Button
-  Scenario:
-    When verify "add user"heading displayed
+  Scenario: :create username already taken one
+    Given Navigate to site
+    When Login as an Admin and navigate to Admin UserManagement PageTen
+    And Click on Add ButtonTen
+    Then verify add user heading displayed
